@@ -1,0 +1,69 @@
+.icon-customers-blue, .icon-customers-green, .icon-dashboard-blue, .icon-dashboard-green, .icon-messages-blue,
+.icon-messages-green, .icon-promotions-blue, .icon-promotions-green, .icon-page-creator-blue, .icon-page-creator-green,
+.icon-analytics-blue, .icon-analytics-green {
+   display: inline-block;
+   background: url('../img/spritesheet.png'); background-repeat: no-repeat;
+   overflow: hidden;
+   text-indent: -9999px;
+   text-align: center;
+    margin: 1em; }
+
+.icon-customers-green:hover {
+  background-position: -1px -0px;
+  width: 62px;
+  height: 42px; }
+
+.icon-customers-green {
+  background-position: -1px -43px;
+  width: 62px;
+  height: 42px; }
+
+.icon-dashboard-green:hover {
+  background-position: -1px -86px;
+  width: 58px;
+  height: 58px; }
+
+.icon-dashboard-green {
+  background-position: -1px -145px;
+  width: 58px;
+  height: 58px; }
+
+.icon-messages-green:hover {
+  background-position: -1px -204px;
+  width: 57px;
+  height: 48px; }
+
+.icon-messages-green {
+  background-position: -1px -253px;
+  width: 57px;
+  height: 48px; }
+
+.icon-promotions-green:hover {
+  background-position: -1px -302px;
+  width: 50px;
+  height: 50px; }
+
+.icon-promotions-green {
+  background-position: -1px -353px;
+  width: 50px;
+  height: 50px; }
+
+.icon-page-creator-green:hover {
+  background-position: -1px -404px;
+  width: 45px;
+  height: 50px; }
+
+.icon-page-creator-green {
+  background-position: -1px -455px;
+  width: 45px;
+  height: 50px; }
+
+.icon-analytics-green:hover {
+  background-position: -1px -506px;
+  width: 42px;
+  height: 50px; }
+
+.icon-analytics-green {
+  background-position: -1px -557px;
+  width: 42px;
+  height: 50px; }
