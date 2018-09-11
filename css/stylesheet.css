@@ -1,9 +1,13 @@
 @supports(grid-area:auto) {
 
+  .body {
+    font-family: "Myriad Pro", sans-serif;
+  }
+
   .site {
     display: grid;
     grid-template-columns: 10% 1fr 1fr 1fr 10%;
-    grid-template-rows: 25px 100px 100px 800px 75px;
+    grid-template-rows: 35px 110px 100px 800px 75px;
     grid-template-areas:
       'hd hd hd hd hd'
       'nv nv nv nv nv'
@@ -17,14 +21,21 @@
     background: #2292eb;
     display: flex;
     justify-content:flex-end;
+    align-items: center;
+    background-image: radial-gradient(farthest-side at 90% 10%, #2497f2, #1e86da);
   }
 
   .navbar {
     grid-column: 1/6;
-    justify-content: center;
-    align-items: center;
     display: flex;
+    justify-content: space-between;
     background-color: #144c7b;
+    background: repeating-linear-gradient(135deg,
+      #144c7b,
+      #144c7b 1px,
+      #134570 1px,
+      #134570 2px);
+    background-image: radial-gradient(farthest-side white);
   }
 
   .dashboard {
@@ -32,6 +43,8 @@
     background-color: #33cc66;
     margin: .5em;
     border-radius: 4px;
+    justify-content:flex-end;
+    align-content: center;
   }
 
   .main-content {
@@ -39,28 +52,33 @@
     background-color: #f6f6f6;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(1fr 5);
-    padding: .7em;
+    grid-template-rows: 40px ;
+    padding: .9em;
     border-radius: 4px;
-    
+    background-image: linear-gradient(#f6f6f6, #fff);
   }
 
   .announcements {
     grid-column: 1/4;
-    grid-row: 1/2;
+    grid-row: 40px;
     background-color: #fff;
+    justify-content:space-between;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px;
   }
 
   .tasks {
     grid-column: 1/2;
     grid-row: 2/4;
-    background-color: #eeaa33;
+    background-color: #fff;
   }
 
   .analytics {
     grid-column: 2/4;
     grid-row: 2/5;
-    background-color: #334455;
+    background-color: #fff;
   }
 
   .recs {
@@ -93,6 +111,7 @@
     box-shadow: 0 0 20px 5px gray;
   }
 
+
   @media screen and (max-width:767px) {
     .main-content {
       grid-template-columns: 1fr;
@@ -113,17 +132,84 @@
 
   }
 
-}
+  h1 {
+    color: #2498f4;
+    font-size: 30px;
+    font-family: "Myriad Pro", sans-serif;
+    font-weight: normal;
+  }
 
-h2 {
-  color: #fff;
-  font-size: 30px;
-  font-family: sans-serif;
-}
+  h2 {
+    color: #fff;
+    font-size: 30px;
+    font-family: "Myriad Pro", sans-serif;
+    font-weight: normal;
+  }
 
-h3 {
-  font-size: 10px;
-  font-family: sans-serif;
-  font-weight: bold;
-  color: #fff;
+  h3 {
+    font-size: 10px;
+    font-family: "Myriad Pro", sans-serif;
+    font-weight: normal;
+    color: #fff;
+    margin: 5px;
+  }
+
+  h4 {
+    font-size: 15px;
+    color: #fe7f13;
+    font-family: "Myriad Pro", sans-serif;
+    font-weight: normal;
+  }
+
+  p {
+    font-size: 15px;
+    color: #777;
+    font-family: "Myriad Pro", sans-serif;
+    font-weight: normal;
+  }
+
+  .icons {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+
+
+  .search {
+    display: flex;
+    width: 10%;
+    position:sticky;
+  }
+
+  .searchTerm {
+    display: flex;
+    float: left;
+    width: 50px%;
+    border: 3px solid #f7f7f7;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px;
+    outline: none;
+    color: #f7f7f7;
+  }
+
+  .searchTerm:focus{
+    color: #f7f7f7;
+  }
+
+  .searchButton {
+    right: -50px;
+    width: 40px;
+    height: 36px;
+    border: 1px solid #f7f7f7;
+    background: #fff;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+
+
 }
