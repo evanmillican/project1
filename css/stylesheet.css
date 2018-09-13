@@ -7,7 +7,7 @@
   .site {
     display: grid;
     grid-template-columns: 10% 1fr 1fr 1fr 10%;
-    grid-template-rows: 35px 110px 100px 800px 75px;
+    grid-template-rows: 40px 110px 100px 1000px 30px;
     grid-template-areas:
       'hd hd hd hd hd'
       'nv nv nv nv nv'
@@ -28,7 +28,8 @@
   .navbar {
     grid-column: 1/6;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     background-color: #144c7b;
     background: repeating-linear-gradient(135deg,
       #144c7b,
@@ -39,68 +40,86 @@
   }
 
   .dashboard {
+    display: flex;
     grid-column: dash;
     background-color: #33cc66;
     margin: .5em;
+    padding-left: 15px;
+    padding-right: 15px;
     border-radius: 4px;
-    justify-content:flex-end;
+    justify-content:space-between;
     align-content: center;
   }
 
   .main-content {
+    grid-area: main;
     grid-column: 2/5;
-    background-color: #f6f6f6;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 40px ;
+    background-color: #fff;
     padding: .9em;
     border-radius: 4px;
     background-image: linear-gradient(#f6f6f6, #fff);
+    grid-template-areas:
+      'ann ann ann'
+      'tasks analy analy'
+      'recs contacts contacts'
+      '. slider slider'
+      'cards cards cards';
   }
 
   .announcements {
+    grid-area: ann;
     grid-column: 1/4;
-    grid-row: 40px;
+    grid-row: 20px;
     background-color: #fff;
     justify-content:space-between;
     align-items: center;
     display: flex;
-    padding: 10px;
+    padding: 20px;
     border-bottom: 1px;
+    border-color: #777;
   }
 
   .tasks {
+    grid-area: tasks;
     grid-column: 1/2;
     grid-row: 2/4;
     background-color: #fff;
   }
 
   .analytics {
-    grid-column: 2/4;
+    grid-area: analy;
+    grid-column: 2/5;
     grid-row: 2/5;
     background-color: #fff;
+    border-left: 3px;
+    border-color: #777;
   }
 
   .recs {
+    grid-area: recs;
     grid-column: 1/2;
-    grid-row: 4/8;
-    background-color: #aaee55;
+    grid-row: 4/6;
+    background-color: #fff;
   }
 
   .contacts {
-    grid-column: 2/4;
+    grid-area: contacts;
+    grid-column: 2/5;
     grid-row: 5/7;
     background-color: #556677;
   }
 
   .slider {
-    grid-column: 2/4;
+    grid-area: slider;
+    grid-column: 2/5;
     grid-row: 7/8;
     background-color: #543778;
   }
 
   .cards {
-    grid-column: 1/4;
+    grid-area: cards;
+    width:100%;
+    grid-column: 1/5;
     grid-row: 8/9;
     background-color: #889900;
   }
@@ -112,12 +131,16 @@
   }
 
 
-  @media screen and (max-width:767px) {
+  @media screen and (min-width:767px) {
+    .site {
+      display: grid;
+    }
     .main-content {
+      display: grid;
+      grid-auto-rows: minmax(100px, auto);
       grid-template-columns: 1fr;
-      grid-template-rows: 25px 25px 75px 75px 25px 25px 25px;
       grid-template-areas:
-        'accouncements'
+        'announcements'
         'tasks'
         'analyticss'
         'recs'
@@ -128,6 +151,13 @@
 
     .dashboard {
       grid-column: 1/6;
+      grid-area: dash;
+    }
+
+    .announcements {
+      grid-area: announcements;
+      grid-column: 1/6;
+      display: flex;
     }
 
   }
@@ -137,6 +167,7 @@
     font-size: 30px;
     font-family: "Myriad Pro", sans-serif;
     font-weight: normal;
+    padding-left: 10%;
   }
 
   h2 {
@@ -147,7 +178,7 @@
   }
 
   h3 {
-    font-size: 10px;
+    font-size: 12px;
     font-family: "Myriad Pro", sans-serif;
     font-weight: normal;
     color: #fff;
@@ -168,48 +199,96 @@
     font-weight: normal;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   .icons {
-    justify-content: center;
     display: flex;
     align-items: center;
   }
 
-
   .search {
     display: flex;
-    width: 10%;
-    position:sticky;
+    justify-content: space-between;
+    width: 20%;
+    padding-top: 25px;
   }
 
+
   .searchTerm {
-    display: flex;
     float: left;
-    width: 50px%;
+    width: 100%;
     border: 3px solid #f7f7f7;
     padding: 5px;
     height: 20px;
-    border-radius: 5px;
+    border-radius: 3px;
     outline: none;
-    color: #f7f7f7;
+    color: #777;
   }
 
   .searchTerm:focus{
-    color: #f7f7f7;
+    color: #00B4CC;
   }
 
   .searchButton {
+    position:sticky;
     right: -50px;
     width: 40px;
     height: 36px;
     border: 1px solid #f7f7f7;
-    background: #fff;
+    background: #f7f7f7;
     text-align: center;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 3px;
     cursor: pointer;
     font-size: 20px;
   }
 
+  .header-title {
+    margin: 12px;
+  }
 
+  .header-title:hover {
+    transform: scale(1.2); }
+
+  hr {
+      display: block;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: auto;
+      margin-right: auto;
+      border-style: inset;
+      border-width: 1px;
+      color: #777;
+  }
+
+  .number .ellipse-green {
+      position : relative;
+      top      : 0;
+      right    : 0;
+      left     : 0;
+      height   : 40px;
+      z-index  : 2;
+      display  : flex;
+      padding-left: 5%;}
+
+
+  .number {
+      display: block;
+      width: 50px;
+      height: 40px;
+      text-indent: 7px;
+      padding-top: 4px;
+      z-index: -1;
+      color: #fff;
+      font-family: 'Myriad Pro', sans-serif;
+      }
+
+  li {
+    list-style-type: none;
+    padding: 15px;
+    margin-left: 10px;
+  }
 
 }

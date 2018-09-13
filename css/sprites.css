@@ -97,13 +97,13 @@
 .icon-customers-green {
   background-position: -336px -428px;
   width: 62px;
-  height: 42px; }
+  height: 42px;}
 
 
 .icon-shadow {
   background-position: -399px -428px;
   width: 60px;
-  height: 5px; }
+  height: 5px;}
 
 
 .icon-dashboard-green:hover {
@@ -189,7 +189,7 @@
   height: 30px; }
 
 
-.ellipse-gray {
+.ellipse-green:hover {
   background-position: -1163px -349px;
   width: 24px;
   height: 24px; }
@@ -198,7 +198,7 @@
 .ellipse-green {
   background-position: -1163px -374px;
   width: 24px;
-  height: 24px; }
+  height: 24px;}
 
 
 .icon-search {
@@ -241,7 +241,10 @@
   background-position: -469px -487px;
   width: 20px;
   height: 20px;
-  margin: 5px; }
+  margin: 12px; }
+
+.icon-help:hover {
+  transform: scale(1.2); }
 
 
 .icon-settings-gray {
@@ -254,7 +257,10 @@
   background-position: -511px -487px;
   width: 20px;
   height: 20px;
-  margin: 5px; }
+  margin: 12px; }
+
+.icon-settings:hover {
+  transform: scale(1.2); }
 
 
 .person-icon-blue {
