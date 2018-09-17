@@ -7,7 +7,7 @@
   .site {
     display: grid;
     grid-template-columns: 10% 1fr 1fr 1fr 10%;
-    grid-template-rows: 40px 110px 100px 1400px 30px;
+    grid-template-rows: 40px 110px 100px 1200px 70px;
     grid-template-areas:
       'hd hd hd hd hd'
       'nv nv nv nv nv'
@@ -24,6 +24,7 @@
     justify-content:flex-end;
     align-items: center;
     background-image: radial-gradient(farthest-side at 90% 10%, #2497f2, #1e86da);
+    padding-right: 10%;
   }
 
   .navbar {
@@ -33,6 +34,8 @@
     justify-content: center;
     align-items: center;
     background-color: #144c7b;
+    position: relative;
+    z-index: -1;
     background: repeating-linear-gradient(135deg,
       #144c7b,
       #144c7b 1px,
@@ -45,6 +48,12 @@
     vertical-align: middle;
     justify-content: center;
     display: block;
+    z-index: 9999;
+  }
+
+  .navbar-fade {
+    position: relative;
+    z-index: 0;
   }
 
   .dashboard {
@@ -66,6 +75,7 @@
     padding: .9em;
     border-radius: 4px;
     background-image: linear-gradient(#f6f6f6, #fff);
+    flex-wrap: wrap;
   }
 
   .announcements {
@@ -85,6 +95,7 @@
     grid-area: tasks;
     grid-column: 1/3;
     grid-row: 2/4;
+    flex-wrap: wrap;
     background-color: #fff;
     justify-content: flex-start;
     border: 1px solid #f7f7f7;
@@ -105,6 +116,9 @@
     border-left: 3px;
     border-color: #777;
     border: 1px solid #f7f7f7;
+
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .recs {
@@ -113,6 +127,8 @@
     grid-row: 4/6;
     background-color: #fff;
     border: 1px solid #f7f7f7;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .contacts {
@@ -124,6 +140,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .slider {
@@ -135,6 +152,8 @@
     height: 200px;
     align-items: center;
     justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .cards {
@@ -145,6 +164,7 @@
     background-color: #2394ee;
     border: 1px solid #f7f7f7;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
   }
@@ -152,9 +172,17 @@
   .footer {
     grid-area: ft;
     grid-column: 1/6;
-    background-color: #f7f7f7;
-    box-shadow: 0 0 20px 5px gray;
-    margin-top: 40px;
+    grid-row: 9/10;
+    background-color: #f4f4f4;
+    box-shadow: 0 0 5px 3px #ddd;
+    margin-top: 70px;
+    padding: 10px;;
+    margin-bottom: none;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 
 
@@ -215,6 +243,15 @@
     text-decoration: none;
   }
 
+  .fade-line {
+    display:block;
+    border:none;
+    color:white;
+    height:20px;
+    width: 1px;
+    background:linear-gradient(180deg ,  gray 30%, rgba(255,255,255,0));
+  }
+
   .icons {
     display: flex;
     align-items: center;
@@ -257,6 +294,14 @@
     border-radius: 3px;
     cursor: pointer;
     font-size: 20px;
+  }
+
+  .vertical-line {
+    display:block;
+    border:none;
+    color:white;
+    height:100%;
+    width: 2px;
   }
 
   .header-title {
@@ -302,14 +347,22 @@
   ul {
     list-style-type: none;
     width: 300px;
+    margin-bottom: 50px;
   }
 
   li {
+    display: flex;
     overflow: auto;
     display: inline;
     align-items: center;
     justify-content: center;
     margin-bottom: 15px;
+    margin-top: 15px;
+    padding-bottom: 30px;
+  }
+
+  li:hover {
+    color: #f6f6f6;
   }
 
   .ellipse-green {
@@ -330,14 +383,55 @@
   }
 
   .icon-number {
-    display: inline;
+    display: flex;
     float: right;
-    text-align: center;
-    margin-right: 30px;
+    justify-content: center;
+    align-items:center;
+    height: 15px;
+    width: 35px;
     border: 1px solid #f7f7f7;
-    position: relative;
     padding: 10px;
   }
+
+  .dropbtn {
+    background-color: #f5f5f5;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+}
+
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1}
+
+  .dropdown:hover .dropdown-content {
+    display: block; }
 
   .icon-article {
     float: left;
@@ -370,6 +464,7 @@
     margin: 25px;
     text-align: center;
     justify-content: center;
+    margin-left: 20px;
 }
 
   .container {
@@ -448,16 +543,16 @@
     padding-right: 50px;
   }
 
-  .card-arrow-left {
+  .slider-arrow-left {
     float: left;
     align-items: center;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 53px;
   }
 
-  .card-arrow-right {
+  .slider-arrow-right {
     float: right;
-    margin-bottom: 50px;
+    margin-top: -78px;
   }
 
   .card {
@@ -468,42 +563,123 @@
     border-radius: 3px;
     background-color: #fff;
     position: relative;
-    align-items: flex-end;
     justify-content: center;
+    align-items: center;
     z-index: 0;
   }
 
   .card-graphic-people {
-    z-index: 1;
-    max-width: 100%;
-    max-height: 100%;
-    align-items: center;
-    justify-content: center;
-    padding-top: -10px;
-    height: auto;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    margin-top: -16px;
   }
 
   .card-graphic-orange {
     max-width: 100%;
     max-height: 100%;
-    align-items: center;
-    justify-content: center;
+    float: right;
     width: 250px;
+    z-index: -2;
   }
 
-  @media only screen and (min-width: 700px) {
+  .card-graphic-green {
+    float: left;
+    z-index: -2;
+  }
+
+  .card-green-text {
+    font-family: 'Myriad Pro', sans-serif;
+    font-size: 18px;
+    color: #33cc66;
+    z-index: 999;
+    text-align: right;
+    padding-top: 40px;
+  }
+
+  .card-green-subtext {
+    font-family: 'Myriad Pro', sans-serif;
+    font-size: 15px;
+    z-index: 999;
+    text-align: right;
+  }
+
+  .card-box {
+    position: relative;
+    background-color: #33cc66;
+    width: 220px;
+    height: 30px;
+    border-radius: 3px;
+    justify-content: center;
+    margin-top: 30%;
+    margin-left: 5%;
+    z-index: 2;
+  }
+
+  .card-people-text {
+    position: relative;
+    font-family: 'Myriad Pro', sans-serif;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    z-index: 4;
+  }
+
+  .card-orange-text {
+    position: relative;
+    font-family: 'Myriad Pro', sans-serif;
+    font-size: 18px;
+    color: #ff9b13;
+    z-index: 999;
+    text-align: left;
+    padding-top: 40px;
+  }
+
+  .banner-left {
+    float: left;
+    z-index: 1;
+    margin-right: -25px;
+    margin-top: 80px;
+  }
+
+  .banner-right {
+    float: right;
+    z-index: 1;
+    margin-left: -25px;
+    margin-top: 80px;
+  }
+
+  .line {
+    display:block;
+    border:none;
+    color:gray;
+    height:20px;
+    width: 1px;
+  }
+
+
+  @media only screen and (min-width: 400px) {
     .main-content {
       grid-template-columns: 150px 200px 400px;
+      min-width: 100%;
     }
   }
 
   @media only screen and (max-width: 700px) {
     .main-content {
       grid-template-columns: 1fr;
+      min-width: 100%;
+      flex-wrap: wrap;
     }
 
     .site {
       grid-template-columns: 1fr;
+      grid-template-areas:
+        'hd'
+        'nv'
+        'dash'
+        'main'
+        'ft';
     }
   }
 
