@@ -4,11 +4,11 @@
 .avatar-green, .avatar-orange, .icon-customers-blue, .icon-customers-green, .channels,
 .icon-shadow, .referrals, .icon-dashboard-blue, .icon-dashboard-green, .icon-messages-blue,
 .icon-messages-green, .icon-promotions-blue, .icon-promotions-green, .icon-page-creator-blue, .icon-page-creator-green,
-.icon-analytics-blue, .icon-analytics-green, .ellipse-1, .ellipse, .mini-avatar,
-.ellipse-gray, .ellipse-green, .icon-search, .button-navigation-small-right, .button-navigation-small,
-.icon-checklist, .card-arrow-right, .check-orange, .slider-arrow-left, .slider-arrow-right,
-.icon-help, .icon-settings-gray, .icon-settings, .person-icon-blue, .person-icon-gray,
-.icon-article, .icon-article-shadow, .avatar-facebook-rollover, .avatar-facebook, .avatar-foursquare-rollover,
+.icon-analytics-blue, .icon-analytics-green, .mini-avatar, .ellipse-1, .ellipse,
+.ellipse-gray, .ellipse-green, .checked-box, .icon-search, .button-navigation-small-right,
+.button-navigation-small, .icon-checklist, .card-arrow-right, .check-orange, .slider-arrow-left,
+.slider-arrow-right, .icon-help, .icon-settings-gray, .icon-settings, .person-icon-blue,
+.person-icon-gray, .icon-article, .icon-article-shadow, .unchecked-box, .avatar-foursquare-rollover,
 .avatar-foursquare, .avatar-twitter-rollover, .avatar-twitter, .avatar-youtube-rollover, .avatar-youtube,
 .icon-checklist-shadow, .banner-left, .banner-right, .icon-tip, .pullup,
 .icon-tip-shadow, .card-arrow-left
@@ -32,30 +32,6 @@
   height: 240px; }
 
 
-.composite-path-2 {
-  background-position: -548px -187px;
-  width: 409px;
-  height: 121px; }
-
-
-.composite-path-4 {
-  background-position: -548px -309px;
-  width: 380px;
-  height: 48px; }
-
-
-.composite-path {
-  background-position: -548px -358px;
-  width: 369px;
-  height: 4px; }
-
-
-.composite-path-3 {
-  background-position: -548px -363px;
-  width: 364px;
-  height: 120px; }
-
-
 .fade-left {
   background-position: -1px -428px;
   width: 299px;
@@ -71,7 +47,7 @@
 .card-graphic-people {
   background-position: -929px -309px;
   width: 250px;
-  height: 171px; }
+  height: 167px; }
 
 
 .card-graphic-green {
@@ -208,6 +184,12 @@
   height: 50px; }
 
 
+.mini-avatar {
+  background-position: -221px -539px;
+  width: 40px;
+  height: 40px; }
+
+
 .ellipse-1 {
   background-position: -958px -270px;
   width: 34px;
@@ -220,74 +202,82 @@
   height: 34px; }
 
 
-.mini-avatar {
-  background-position: -1028px -270px;
-  width: 30px;
-  height: 30px; }
-
-
 .ellipse-green:hover {
-  background-position: -1059px -270px;
+  background-position: -1028px -270px;
   width: 24px;
   height: 24px; }
 
 
 .ellipse-green {
-  background-position: -1084px -270px;
+  background-position: -1053px -270px;
   width: 24px;
   height: 24px; }
 
 
+.checked-box {
+  background-position: -1078px -270px;
+  width: 23px;
+  height: 21px; }
+
+
 .icon-search {
-  background-position: -1109px -270px;
+  background-position: -1102px -270px;
   width: 23px;
   height: 22px; }
 
 
 .button-navigation-small-right {
-  background-position: -221px -539px;
+  background-position: -1126px -270px;
   width: 22px;
   height: 22px; }
+
+
+.button-navigation-small-right:hover {
+  transform: scale(1.2); }
 
 
 .button-navigation-small {
-  background-position: -244px -539px;
+  background-position: -262px -539px;
   width: 22px;
   height: 22px; }
 
 
+.button-navigation-small:hover {
+  transform: scale(1.2); }
+
+
 .icon-checklist {
-  background-position: -267px -539px;
+  background-position: -262px -562px;
   width: 22px;
   height: 20px; }
 
 
 .card-arrow-right {
-  background-position: -267px -560px;
-  width: 22px;
-  height: 50px; }
-
-
-.check-orange {
-  background-position: -221px -562px;
-  width: 22px;
-  height: 21px; }
-
-
-.slider-arrow-left {
-  background-position: -244px -562px;
-  width: 22px;
-  height: 50px; }
-
-
-.slider-arrow-right {
   background-position: -826px -567px;
   width: 22px;
   height: 50px; }
 
 
-.icon-help {
+.check-orange {
   background-position: -849px -567px;
+  width: 22px;
+  height: 21px; }
+
+
+.slider-arrow-left {
+  background-position: -872px -567px;
+  width: 22px;
+  height: 50px; }
+
+
+.slider-arrow-right {
+  background-position: -221px -580px;
+  width: 22px;
+  height: 50px; }
+
+
+.icon-help {
+  background-position: -1153px -583px;
   width: 20px;
   height: 20px;
   margin: 12px;}
@@ -298,13 +288,13 @@
 
 
 .icon-settings-gray {
-  background-position: -870px -567px;
+  background-position: -244px -583px;
   width: 20px;
   height: 20px; }
 
 
 .icon-settings {
-  background-position: -891px -567px;
+  background-position: -1174px -583px;
   width: 20px;
   height: 20px;
   margin: 12px;}
@@ -315,17 +305,19 @@
 
 
 .person-icon-blue {
-  background-position: -1153px -583px; width: 20px; height: 20px; }
+  background-position: -265px -583px;
+  width: 20px;
+  height: 20px; }
 
 
-.person-icon-gray {
-  background-position: -1174px -583px;
+.person-icon-blue:hover {
+  background-position: -849px -589px;
   width: 20px;
   height: 20px; }
 
 
 .icon-article {
-  background-position: -221px -584px;
+  background-position: -119px -590px;
   width: 19px;
   height: 23px; }
 
@@ -336,50 +328,44 @@
   height: 12px; }
 
 
-.avatar-facebook:hover {
+.unchecked-box {
   background-position: -1131px -168px;
-  width: 16px;
-  height: 16px; }
-
-
-.avatar-facebook {
-  background-position: -1148px -168px;
-  width: 16px;
-  height: 16px; }
+  width: 18px;
+  height: 18px; }
 
 
 .avatar-foursquare:hover {
-  background-position: -1165px -168px;
+  background-position: -1150px -168px;
   width: 16px;
   height: 16px; }
 
 
 .avatar-foursquare {
-  background-position: -1182px -168px;
+  background-position: -1167px -168px;
   width: 16px;
   height: 16px; }
 
 
 .avatar-twitter:hover {
-  background-position: -1133px -270px;
+  background-position: -1184px -168px;
   width: 16px;
   height: 16px; }
 
 
 .avatar-twitter {
-  background-position: -1133px -287px;
+  background-position: -1149px -289px;
   width: 16px;
   height: 16px; }
 
 
 .avatar-youtube:hover {
-  background-position: -1150px -289px;
+  background-position: -1166px -289px;
   width: 16px;
   height: 16px; }
 
 
 .avatar-youtube {
-  background-position: -1167px -289px;
+  background-position: -1183px -289px;
   width: 16px;
   height: 16px; }
 
@@ -421,6 +407,6 @@
 
 
 .card-arrow-left {
-  background-position: -1184px -289px;
+  background-position: -285px -539px;
   width: 11px;
   height: 18px; }
