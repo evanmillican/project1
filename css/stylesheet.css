@@ -739,17 +739,16 @@
     font-size: 15px;
     color: #fff;
     text-align: center;
-    z-index: 9999;
+    z-index: 99999;
   }
 
   .card-orange-text {
-    position: relative;
     font-family: 'Myriad Pro', sans-serif;
-    font-size: 18px;
+    font-size: 15px;
+    z-index: 999;
+    text-align: right;
     color: #ff9b13;
-    z-index: 99999;
-    padding-top: 40px;
-    float: left;
+    padding-top: 60px;
   }
 
   .banner-left {
